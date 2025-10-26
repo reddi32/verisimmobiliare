@@ -1,0 +1,50 @@
+<div class="container-fluid text-center">
+  <div class="col" *ngIf="venditaPost$ | async as venditaPost">
+    <div class="row-attraction-post-container">
+      <div class="container-fluid text-start">
+        <h2 class="py-3">{{venditaPost.fields.title}}</h2>
+        <img *ngIf="venditaPost.fields.featuredImage.fields.file.url"
+          [attr.src]="venditaPost.fields.featuredImage.fields.file.url" class="img-fluid py-3">
+        <p class="fs-6 content py-3">
+          <markdown ngPreserveWhitespaces>
+            {{venditaPost.fields.content}}
+          </markdown>
+        </p>
+        <p class="fs-6 location py-1">
+          <markdown ngPreserveWhitespaces>
+            {{venditaPost.fields.location}}
+          </markdown>
+        </p>
+        <p class="fs-6 email py-1">
+          <markdown ngPreserveWhitespaces>
+            {{venditaPost.fields.email}}
+          </markdown>
+        </p>
+        <p class="fs-6 phone py-1">
+          <markdown ngPreserveWhitespaces>
+            {{venditaPost.fields.phone}}
+          </markdown>
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center attraction-post-container py-3">
+          <ng-container *ngFor="let i of [2, 3, 5, 6, 7, 8]">
+            <img *ngIf="venditaPost.fields['featuredImage' + i]?.fields.file.url"
+              [attr.src]="venditaPost.fields['featuredImage' + i]?.fields.file.url" class="img-fluid" />
+          </ng-container>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-3 justify-content-center attraction-post-container py-3">
+          <ng-container *ngFor="let i of [9, 10]">
+            <img *ngIf="venditaPost.fields['featuredImage' + i]?.fields.file.url"
+              [attr.src]="venditaPost.fields['featuredImage' + i]?.fields.file.url" class="img-fluid" />
+          </ng-container>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center attraction-post-container">
+          <ng-container *ngFor="let i of [11, 12, 13, 14, 15, 16, 17, 18]">
+            <img *ngIf="venditaPost.fields['featuredImage' + i]?.fields.file.url"
+              [attr.src]="venditaPost.fields['featuredImage' + i]?.fields.file.url" class="img-fluid" />
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

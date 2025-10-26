@@ -1,0 +1,28 @@
+<div class="container-fluid text-center">
+  <div class="container-fluid">
+
+    <!-- Se non ci sono articoli, mostra app-coming-soon -->
+    <ng-container *ngIf="venditaPosts$ | async as venditaPosts">
+      <ng-container *ngIf="venditaPosts.items.length > 0; else noVenditaPosts">
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center attraction-post-container">
+          <div class="col" *ngFor="let venditaPost of venditaPosts.items">
+            <div class="container-fluid text-start">
+              <img *ngIf="venditaPost.fields.featuredImage.fields.file.url"
+                   [attr.src]="venditaPost.fields.featuredImage.fields.file.url"
+                   class="img-fluid" style="width: 80%">
+              <h2 class="fs-4 py-1">{{venditaPost.fields.title}}</h2>
+              <p>{{venditaPost.fields.summary}}</p>
+              <a [routerLink]="['/venditaPost', venditaPost.sys.id]" class="btn btn-outline-dark">Leggi di più</a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Template alternativo se non ci sono articoli -->
+      <ng-template #noVenditaPosts>
+        <app-coming-soon></app-coming-soon>
+      </ng-template>
+    </ng-container>
+
+  </div>
+</div>

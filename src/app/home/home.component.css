@@ -1,0 +1,42 @@
+.carousel-inner {
+    border-radius: 5px
+}
+
+.display-1{
+    color: #242423;
+}
+
+.fs-3{
+    color: #242423;
+}
+
+.container-fluid.text-center.px-4.py-5{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Aggiungi altre proprietà di stile se necessario */
+    height: 50vh;
+}
+
+
+/* Regole di stile per dispositivi mobili */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-width: fit-content;
+    }
+}
+
+/* Regole di stile per dispositivi desktop */
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 995px) {
+    .carousel-inner .carousel-item img {
+        object-fit: cover;
+        height: 50vh; /* Imposta l'altezza dell'immagine per i tablet in orientamento verticale */
+    }
+}

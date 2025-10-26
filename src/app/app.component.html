@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">
+        <img src="../assets/Logo_2.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        VE.RIS Immobiliare
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/vendita">Vendita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/affitto">Affitti</a>
+          </li><!--
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contatti">Contatti</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/anzio">Anzio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <!--FOOTER-->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <img src="../assets/Logo_2.svg" width="25%" alt="">
+        </a>
+        <p class="text-body-secondary">&copy; 2023 - Redlabpc</p>
+      </div>
+
+        <ul class="nav col-md-5 justify-content-end">
+          <li class="nav-item px-4"><a routerLink="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item px-4"><a routerLink="/vendita" class="nav-link p-0 text-body-secondary">Vendita</a></li>
+          <li class="nav-item px-4"><a routerLink="/affitto" class="nav-link p-0 text-body-secondary">Affitti</a></li>
+          <li class="nav-item px-4"><a routerLink="/contatti" class="nav-link p-0 text-body-secondary">Contatti</a></li>
+          <li class="nav-item px-4"><a routerLink="/anzio" class="nav-link p-0 text-body-secondary">Anzio</a></li>
+        </ul>
+  
+      <div class="col mb-3">
+        <!--<ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>-->
+      </div>
+  
+      <div class="col mb-3">
+        <!--<ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>-->
+      </div>
+    </footer>
+  </div>
+</div>
